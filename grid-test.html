@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SickleS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link href="css/developer.css" rel="stylesheet" data-sickles="sickles" />
+	<link href="footable/css/footable-0.1.css" rel="stylesheet" data-sickles="sickles" />
+</head>
+
+<body>
+	<div class="container">
+		<div id="topmenu" class="fixed-top">
+			<div class="container-960">
+				<div class="menu row row12 bootlike">
+					<div class="col col12">
+						<div class="collapse"><a class="btn" href="#" data-target=".collapsable">&equiv;</a></div>
+						<ul class="nav collapsable">
+							<li><a href="#">What's SickleS</a></li>
+							<li><a href="#">Component</a></li>
+							<li><a href="#">Browser support</a></li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-target=".dropdown-menu" href="#">Links<span class="arrow-down"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li class="dropdown-header">Dropdown header</li>
+									<li class="active"><a href="#">Separated link</a></li>
+									<li><a href="#">One more separated link</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="row row12 bootlike">
+			<div id="sic_banner" class="col col12 text-center">
+				<div class="h-master">
+					<h1>SickleS</h1>
+					<p class="descript">The powerful modular reponsive web framework</p>
+				</div>
+			</div>
+			<div class="container-960">
+				<div class="col">
+					<div class="item">
+						<h1 class="heading">What's special?</h1>
+						<p>SickleS :</p>
+						<div class="msg msg-info">
+							<ul>
+								<li>Reponsive based on element's width instead of depend on css media-query.</li>
+								<li>Great flexible grid system</li>
+								<li>SickleS are em based framework,that mean everything is reponsive.Try resize, zoom in, zoom out with your browser. </li>
+								<li>Sickles embrace browser's default fontsize: 16px(1em),but you can alter the whole framework's ratio just by alter <u><b>body</b></u> or <u><b>html</b></u> tag fontsize: %</li>
+								<li>Maintain by Stylus prcss.You can easily modifiy and build your own Sickles</li>
+							</ul>
+						</div>
+						<p>With Sickles included, you can write css like this :</p>
+						<code>.header[max-width~="500px"] {background-color: #eee;}</code>
+						<p>or like this: </p>
+						<code>.header[min-width~="31.250em"][max-width~="48em"] .nav {clear: both;}</code>
+						<p>Pratically it mean browser now understand another couple of pseudo slelector: <code>[min-width~="x"][max-width~="x"]</code></p>
+						<div class="msg msg-fail">
+							<ul>
+								<li>Due to nowaday browser's Same Origin Policy, sickles.js and sickles.css or any other external css file that use the element query css must be hosted on the same domain to take effective</li>
+							</ul>
+						</div>
+						<h1 class="heading">Browser support</h1>
+						<ul>
+							<li>IE 9+</li>
+							<li>Chrome,Firefox,Opera,Safari</li>
+							<li>Mobile browsers(only Android 2.3 native browser tested)</li>
+						</ul>
+						<div class="msg msg-warning">
+							<p>
+								<strong>Testing required.Calling for tester and bug reporter.</strong><br />
+								I developed this framework single-handedly so the amount of works are huge.
+								Also this is my first project that write for community so bugs and uglies cant be avoided.
+								If you like this please fork and help and complain or whatever are welcome!
+
+							</p>
+						</div>
+						<p class="notice">Please drop me a message to tell me whatever you think,or just chit-chat also can <3 : <strong>singgum3b@gmail.com</strong></p>
+						<h1 class="heading">Credits</h1>
+						<ul>
+							<li>Inspired by <a href="https://github.com/tysonmatanich/elementQuery">Tysonmatanich/elementQuery</a></li>
+							<li>Inspired by <a href="http://twbs.github.io/bootstrap/">Bootstrap</a></li>
+							<li>Footable plugin modded from <a href="https://github.com/bradvin/FooTable">bradvin/FooTable</a></li>
+							<li><a href="http://necolas.github.io/normalize.css/">Normalize</a></li>
+							<li>Me, for being a nerd.</li>
+						</ul>
+						<h1 class="heading">Usage</h1>
+						<p class="notice">Dependency: Jquery. I recommended Jquery 2.x, since Sickles doesnt support ie 6-8 anyway</p>
+						<p>Sickles consist of 2 file just like bootstrap : <strong>sickles.min.js(5kb)</strong> and <strong>sickles.min.css(38kb)</strong> not gzipped </p>
+						<p><strong>sickles.min.js(5kb)</strong> must be place right before the body closing tag <code>&lt;/body&gt;</code></p>
+						<p>Also header require this meta tag, just like bootstrap</p>
+						<code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; </code>
+						<p>Sickles doesn't include footable plugin, if you need reponsive footable,add it before <strong>sickles.min.js(5kb)</strong></p>
+						<h1 class="heading">Headers</h1>
+						<h1>This is h1</h1>
+						<h2>This is h2</h2>
+						<h3>This is h3</h3>
+						<h4>This is h4</h4>
+						<h5>This is h5</h5>
+						<h6>This is h6</h6>
+						<h1 class="heading">.h-master</h1>
+						<div class="h-master" style="background-color: whitesmoke; padding: 1em">
+							<h1>Hello there!</h1>
+							<p class="descript">I'm just a slogan</p>
+						</div>
+						<h1 class="heading">Viewport reponsive</h1>
+						<h2 class="heading">.viewport-ref</h2>
+						<p>.viewport-ref mark the element which below classes reference width from,instead of the media-query</p>
+						<p>You can have as many viewport-ref as you want,but the nearest .viewport-ref parent count</p>
+						<p class="notice">Other support: .slidershow and .img-thumbnail classes</p>
+						<p>Breakpoint 30em and 48em</p>
+						<h3 class="heading">.pc-hidden</h3>
+						<h3 class="heading">.tablet-hidden</h3>
+						<h3 class="heading">.phone-hidden</h3>
+						<h1 class="heading">Nav and Menu</h1>
+						<p>Provide flexible menu components.</p>
+						<h2 class="heading">.nav</h2>
+						<ul class="nav">
+							<li><a href="#">ITEM 01</a></li>
+							<li class="active"><a href="#">ITEM 02</a></li>
+							<li><a href="#">ITEM 03</a></li>
+							<li><a href="#">ITEM 04</a></li>
+							<li><a class="btn" href="#">ITEM 05</a></li>
+						</ul>
+						<h2 class="heading">.nav-minimal</h2>
+						<ul class="nav-minimal">
+							<li><a href="#">Item 01</a></li>
+							<li class="active"><a href="#">Item 02</a></li>
+							<li><a href="#">Item 03</a></li>
+							<li><a href="#">Item 04</a></li>
+							<li><a href="#">Item 05</a></li>
+						</ul>
+						<h2 class="heading">.nav .nav-vertical</h2>
+						<ul class="nav nav-vertical">
+							<li><a href="#">ITEM 01</a></li>
+							<li class="active"><a href="#">ITEM 02</a></li>
+							<li><a href="#">ITEM 03</a></li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-target=".dropdown-menu" href="#">ITEM 04<span class="arrow-down"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li class="dropdown-header">Dropdown header</li>
+									<li class="active"><a href="#">Separated link</a></li>
+									<li><a href="#">One more separated link</a></li>
+								</ul>
+							</li>
+							<li><a href="#">ITEM 05</a></li>
+						</ul>
+						<h2 class="heading">.menu .nav</h2>
+						<p>See top menu for demo, support collapsable and nested dropdown</p>
+						<p class="notice">Responsive width reference from .menu element</p>
+						<h1 class="heading">Dropdown</h1>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-target=".dropdown-menu" href="#">Dropdown<span class="arrow-down"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="dropdown-header">Dropdown header</li>
+								<li class="active"><a href="#">Separated link</a></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<a class="dropdown-toggle btn" data-target=".dropdown-menu" href="#">Dropdown<span class="arrow-down"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="dropdown-header">Dropdown header</li>
+								<li class="active"><a href="#">Separated link</a></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</div>
+						<h1 class="heading">Tabs</h1>
+						<div class="tabs">
+							<ol class="tabs-nav">
+								<li data-index="0">This</li>
+								<li data-index="1" class="tab-active">Is</li>
+								<li data-index="2">Tabs</li>
+								<li data-index="0">This</li>
+								<li data-index="1">Is</li>
+								<li data-index="2">Tabs</li>
+							</ol>
+							<div class="tabs-content">
+								<div class="tabs-item tab-active">
+									<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis</p>
+									<div style="text-align: center">
+										<ol class="pagi">
+											<li><<</li>
+											<li>1</li>
+											<li class="pagi-active">2</li>
+											<li>3</li>
+											<li>4</li>
+											<li>5</li>
+											<li>>></li>
+										</ol>
+									</div>
+								</div>
+								<div class="tabs-item">
+									<p>Quisque sit amet est et sapien ullamcorper pharetra: Vestibulum erat wisi, condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+								</div>
+								<div class="tabs-item">
+									<p>Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+								</div>
+							</div>
+						</div>
+						<h1 class="heading">Pagination</h1>
+						<h2 class="heading">ol .pagi</h2>
+						<div style="background-color: whitesmoke; text-align: center; padding: 1em">
+							<ol class="pagi">
+								<li><<</li>
+								<li>1</li>
+								<li class="pagi-active">2</li>
+								<li>3</li>
+								<li>4</li>
+								<li>5</li>
+								<li>>></li>
+							</ol>
+						</div>
+
+						<h2 class="heading">ol .pagi .pagi-dark</h2>
+						<div style="background-color: slategray; text-align: center; padding: 1em">
+							<ol class="pagi pagi-dark">
+								<li><<</li>
+								<li>1</li>
+								<li class="pagi-active">2</li>
+								<li>3</li>
+								<li>4</li>
+								<li>5</li>
+								<li>>></li>
+							</ol>
+						</div>
+						<h1 class="heading">Slidershow</h1>
+						<p>Simply slide & reponsive. Support content hiding classes for adapt with small screens.I actually write dedicated plugin code for it.</p>
+						<p class="notice">Support .viewport-ref classes</p>
+						<h2 class="heading">Methods</h2>
+						<h3 class="heading">Retrieve plugin instance</h3>
+						<p><code>obj = $('.slidershow').data('slidershow')</code></p>
+						<p class="notice">If you query more than one instance,use each()</p>
+						<h3 class="heading">Slide methods & option</h3>
+						<p>The methods name pretty much say its all.Index start from 0.</p>
+						<p><code>obj.slideTo(index)</code></p>
+						<p><code>obj.slideNext()</code></p>
+						<p><code>obj.slidePrev()</code></p>
+						<p><code>obj.slide()</code></p>
+						<p><code>obj.slideStop()</code></p>
+						<p><code>obj.speed</code></p>
+						<p><code>obj.interval</code></p>
+						<div class="slidershow viewport-ref">
+							<div class="slide-content tablet-hidden pc-hidden">
+								<div class="slide-item active">
+									<div class="slide-caption">
+										<h2>Alo moto</h2>
+									</div>
+									<img src="img/jpeg_s.jpg" />
+								</div>
+								<div class="slide-item">
+									<div class="slide-caption">
+										<h2>Alo moto</h2>
+									</div>
+									<img src="img/jpeg1_s.jpg" />
+								</div>
+								<div class="slide-item">
+									<div class="slide-caption">
+										<h2 class="slide-title">Alo moto</h2>
+										<p>
+											lorem ipsum dolor sit amet
+										<br />
+											halluea
+										</p>
+									</div>
+									<img src="img/jpeg2_s.jpg" />
+								</div>
+							</div>
+							<div class="slide-content phone-hidden">
+								<div class="slide-item active">
+									<div class="slide-caption">
+										<h2>Alo moto</h2>
+									</div>
+									<img src="img/jpeg.jpg" />
+								</div>
+								<div class="slide-item">
+									<div class="slide-caption">
+										<h2>Alo moto</h2>
+									</div>
+									<img src="img/jpeg1.jpg" />
+								</div>
+								<div class="slide-item">
+									<div class="slide-caption">
+										<h2 class="slide-title">Alo moto</h2>
+										<p>
+											lorem ipsum dolor sit amet
+										<br />
+											halluea
+										</p>
+									</div>
+									<img src="img/jpeg2.jpg" />
+								</div>
+							</div>
+							<ol class="slide-nav">
+								<li data-index="0"></li>
+								<li data-index="1" class="active"></li>
+								<li data-index="2"></li>
+							</ol>
+						</div>
+						<div class="slidershow viewport-ref">
+							<div class="slide-content tablet-hidden pc-hidden">
+								<div class="slide-item active">
+									<div class="slide-caption">
+										<h2>Alo moto</h2>
+									</div>
+									<img src="img/jpeg_s.jpg" />
+								</div>
+								<div class="slide-item">
+									<div class="slide-caption">
+										<h2>Alo moto</h2>
+									</div>
+									<img src="img/jpeg1_s.jpg" />
+								</div>
+								<div class="slide-item">
+									<div class="slide-caption">
+										<h2 class="slide-title">Alo moto</h2>
+										<p>
+											lorem ipsum dolor sit amet
+										<br />
+											halluea
+										</p>
+									</div>
+									<img src="img/jpeg2_s.jpg" />
+								</div>
+							</div>
+							<div class="slide-content phone-hidden">
+								<div class="slide-item active">
+									<div class="slide-caption">
+										<h2>Alo moto</h2>
+									</div>
+									<img src="img/jpeg.jpg" />
+								</div>
+								<div class="slide-item">
+									<div class="slide-caption">
+										<h2>Alo moto</h2>
+									</div>
+									<img src="img/jpeg1.jpg" />
+								</div>
+								<div class="slide-item">
+									<div class="slide-caption">
+										<h2 class="slide-title">Alo moto</h2>
+										<p>
+											lorem ipsum dolor sit amet
+										<br />
+											halluea
+										</p>
+									</div>
+									<img src="img/jpeg2.jpg" />
+								</div>
+							</div>
+							<ol class="slide-nav">
+								<li data-index="0"></li>
+								<li data-index="1" class="active"></li>
+								<li data-index="2"></li>
+							</ol>
+						</div>
+						<h1 class="heading">Image classes</h1>
+						<h2 class="heading">.img-rounded .img-circle .img-polaroid</h2>
+						<div class="row row3">
+							<div class="col col1 text-center">
+								<div class="item">
+									<img class="img-rounded" src="img/img.png" />
+								</div>
+							</div>
+							<div class="col col1 text-center">
+								<div class="item">
+									<img class="img-polaroid" src="img/img.png" />
+								</div>
+							</div>
+							<div class="col col1 text-center">
+								<div class="item">
+									<img class="img-circle" src="img/img.png" />
+								</div>
+							</div>
+						</div>
+						<h2 class="heading">.img-thumbnail</h2>
+						<p class="notice">You can use in conjunction with those viewport classes to switch between different image proportion</p>
+						<div class="row row3 viewport-ref">
+							<div class="col col1">
+								<div class="item">
+									<div class="thumbnail">
+										<img class="img-rounded phone-hidden" src="img/img.png" />
+										<img class="img-rounded pc-hidden tablet-hidden" src="img/img_w.png" />
+										<div class="thumbnail-caption">
+											<h2 class="heading">This thumbnail have viewport-ref support</h2>
+											<p>Resize the window to see it in action</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col col1">
+								<div class="item">
+									<div class="thumbnail">
+										<img class="img-rounded" src="img/img.png" />
+										<div class="thumbnail-caption">
+											<h2 class="heading">Img title</h2>
+											<p>Pellentesque habitant morbi tristique senectus et </p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col col1">
+								<div class="item">
+									<div class="thumbnail">
+										<img class="img-rounded" src="img/img.png" />
+										<div class="thumbnail-caption">
+											<h2 class="heading">Img title</h2>
+											<p>Pellentesque habitant </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h1 class="heading">Button</h1>
+						<p>
+							<a href="#" class="btn">Button 01</a>
+							<a href="#" class="btn btn-dark">Button 02</a>
+							<a href="#" class="btn btn-skyblue">Button 05</a>
+						</p>
+						<h2 class="heading">Button disabled</h2>
+						<p>
+							<a href="#" class="btn disabled">Button 01</a>
+							<a href="#" class="btn btn-dark disabled">Button 02</a>
+							<a href="#" class="btn btn-skyblue disabled">Button 05</a>
+						</p>
+						<h2 class="heading">Link, button, input style</h2>
+						<p>
+							<a href="#" class="btn">Link</a>
+							<button class="btn" type="submit" disabled="disabled">Button</button>
+							<input class="btn" type="button" value="Input">
+							Hellofolk
+						</p>
+						<h2 class="heading">Button sizing</h2>
+						<p>
+							<a href="#" class="btn">Button 01</a>
+						</p>
+						<p>
+							<a href="#" class="btn large">Button 01 large</a>
+						</p>
+						<p>
+							<a href="#" class="btn x-large">Button 01 x-large</a>
+						</p>
+						<p>
+							<a href="#" class="btn xx-large">Button 01 xx-large</a>
+						</p>
+						<h2 class="heading">Button block</h2>
+						<div style="max-width: 300px; margin: auto; background-color: whitesmoke; padding: 1em; border-radius: 3px">
+							<a href="#" class="btn full-wide">Button 01</a>
+						</div>
+						<h1 class="heading">Progress bars</h1>
+						<h2 class="heading">.progress</h2>
+						<div class="progress">
+							<div class="progress-bar" style="width: 40%"></div>
+						</div>
+						<h2 class="heading">.progress .progress-3d</h2>
+						<div class="progress progress-3d">
+							<div class="progress-bar" style="width: 60%"></div>
+						</div>
+						<h2 class="heading">.progress .progress-3d .progress-stripe</h2>
+						<div class="progress progress-3d">
+							<div class="progress-bar progress-stripe" style="width: 60%"></div>
+						</div>
+						<h1 class="heading">Wizard step</h1>
+						<h2 class="heading">.wizard</h2>
+						<p>Any number of step with simple markup</p>
+						<ol class="wizard">
+							<li class="wizard-step wizard-step-finish"><span class="wizard-step-number">1</span>Step 1</li>
+							<li class="wizard-step wizard-step-active"><span class="wizard-step-number">2</span>Step 2</li>
+							<li class="wizard-step"><span class="wizard-step-number">3</span>Step 3</li>
+							<li class="wizard-step"><span class="wizard-step-number">4</span>Step 4</li>
+							<li class="wizard-step"><span class="wizard-step-number">5</span>Step 5</li>
+						</ol>
+						<h2 class="heading">.wizard .x-large</h2>
+						<p>Combine with x-large classes</p>
+						<ol class="wizard x-large">
+							<li class="wizard-step wizard-step-finish"><span class="wizard-step-number">1</span>Step 1</li>
+							<li class="wizard-step wizard-step-finish"><span class="wizard-step-number">2</span>Step 2</li>
+							<li class="wizard-step wizard-step-active"><span class="wizard-step-number">3</span>Step 3</li>
+							<li class="wizard-step"><span class="wizard-step-number">4</span>Step 4</li>
+							<li class="wizard-step"><span class="wizard-step-number">5</span>Finish!</li>
+						</ol>
+						<h1 class="heading">Message classes</h1>
+						<h2 class="heading">.msg</h2>
+						<div class="msg">
+							<p>
+								<a href="#">Aenean fermentum</a> elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.
+							</p>
+						</div>
+						<h2 class="heading">.msg .msg-warning</h2>
+						<div class="msg msg-warning">
+							<p>
+								<a href="#">Aenean fermentum</a> elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.
+							</p>
+						</div>
+						<h2 class="heading">.msg .msg-fail</h2>
+						<div class="msg msg-fail">
+							<p>
+								<a href="#">Aenean fermentum</a> elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.
+							</p>
+						</div>
+						<h2 class="heading">.msg .msg-success</h2>
+						<div class="msg msg-success">
+							<p>
+								<a href="#">Aenean fermentum</a> elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.
+							</p>
+						</div>
+						<h1 class="heading">Notice classes</h1>
+						<h2 class="heading">.notice</h2>
+						<p class="notice">This is default notice </p>
+						<h2 class="heading">.notice .notice-warning</h2>
+						<p class="notice notice-warning">This is warning notice </p>
+						<h2 class="heading">.notice .notice-fail</h2>
+						<p class="notice notice-fail">This is fail notice </p>
+						<h2 class="heading">.notice .notice-success</h2>
+						<p class="notice notice-success">This is success notice </p>
+						<h1 class="heading">Box classes</h1>
+						<p>Provide some helpful class to make your content standout </p>
+						<p class="notice">Note that the outside backgrounds are for demonstration only </p>
+						<h2 class="heading">.box-glass</h2>
+						<div style="background-color: steelblue; color: white; padding: 1em;">
+							<div class="box box-glass">
+								<div class="box-content">
+									<p>Hello, I'm a glass box.</p>
+								</div>
+							</div>
+						</div>
+						<h2 class="heading">.box-simple</h2>
+						<div style="padding: 1em; background-color: whitesmoke">
+							<div class="box box-simple">
+								<div class="box-content">
+									<p>Hello, I'm a simple box.</p>
+								</div>
+							</div>
+						</div>
+						<h2 class="heading">.box-3d</h2>
+						<div style="padding: 1em; background-color: whitesmoke">
+							<div class="box box-3d">
+								<div class="box-content">
+									<p>Hello, I'm a 3d box.</p>
+								</div>
+							</div>
+						</div>
+						<h2 class="heading">.box-cap</h2>
+						<p>.box-cap is a supporting class for boxes.It help you styling your boxes</p>
+						<div style="padding: 1em; background-color: whitesmoke">
+							<div class="box box-simple">
+								<div class="box-cap"></div>
+								<div class="box-content">
+									<p>Hello, I'm a simple box.</p>
+								</div>
+							</div>
+						</div>
+						<h2 class="heading">.box-title</h2>
+						<p>.box-title is a supporting class for boxes.It help you quickly create an article like page</p>
+						<div style="padding: 1em; background-color: whitesmoke">
+							<div class="box box-simple">
+								<div class="box-title">
+									<h2>Demostration is a must</h2>
+								</div>
+								<div class="box-content">
+									<p>Is this an article?</p>
+								</div>
+							</div>
+						</div>
+						<h1 class="heading">Paragraph</h1>
+						<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+						<h2 class="heading">Blockquote</h2>
+						<blockquote>
+							<p>
+								Pardon me. It seems to me that what you folks need is a hero.
+							</p>
+							<p class="note"><small>said <cite title="Source Title">Hercules</cite></small>  </p>
+						</blockquote>
+						<h2 class="heading">Quote</h2>
+						<p><q cite="http://www.google.com">Vestibulum erat wisi, condimentum sed.</q></p>
+						<h2 class="heading">Blockquote .pull-right .text-right</h2>
+						<blockquote class="text-right pull-right">
+							<p>Think your nanny goat would go berserk if you played hooky this afternoon?</p>
+							<p class="note"><small>said <cite title="Source Title">Megara</cite></small>  </p>
+						</blockquote>
+						<p>
+							Quisque sit amet est et sapien ullamcorper pharetra: <q cite="http://www.google.com">Vestibulum erat wisi, condimentum sed.</q>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
+						</p>
+						<h1 class="heading">Table</h1>
+						<h2 class="heading">.table</h2>
+						<table class="table">
+							<tr>
+								<th>Name</th>
+								<th>Phone</th>
+
+								<th>Date</th>
+							</tr>
+							<tr>
+								<td>Hollee</td>
+								<td>1-664-520-4588</td>
+
+								<td>August 2nd, 2012</td>
+							</tr>
+							<tr>
+								<td>Colette</td>
+								<td>862-3211</td>
+
+								<td>July 3rd, 2014</td>
+							</tr>
+							<tr>
+								<td>Margaret</td>
+								<td>326-1614</td>
+
+								<td>August 27th, 2013</td>
+							</tr>
+							<tr>
+								<td>Adrienne</td>
+								<td>1-159-147-6757</td>
+
+								<td>October 31st, 2012</td>
+							</tr>
+							<tr>
+								<td>Mira</td>
+								<td>1-203-121-0270</td>
+
+								<td>June 27th, 2014</td>
+							</tr>
+						</table>
+						<h2 class="heading">.table.table-zebra</h2>
+						<table class="table table-zebra">
+							<tr>
+								<th>Name</th>
+								<th>Phone</th>
+
+								<th>Date</th>
+							</tr>
+							<tr>
+								<td>Hollee</td>
+								<td>1-664-520-4588</td>
+
+								<td>August 2nd, 2012</td>
+							</tr>
+							<tr>
+								<td>Colette</td>
+								<td>862-3211</td>
+
+								<td>July 3rd, 2014</td>
+							</tr>
+							<tr>
+								<td>Margaret</td>
+								<td>326-1614</td>
+
+								<td>August 27th, 2013</td>
+							</tr>
+							<tr>
+								<td>Adrienne</td>
+								<td>1-159-147-6757</td>
+
+								<td>October 31st, 2012</td>
+							</tr>
+							<tr>
+								<td>Mira</td>
+								<td>1-203-121-0270</td>
+
+								<td>June 27th, 2014</td>
+							</tr>
+						</table>
+						<h2 class="heading">.table.table-relax &amp; .table-bordered </h2>
+						<table class="table table-relax table-bordered">
+							<tr>
+								<th>Name</th>
+								<th>Phone</th>
+
+								<th>Date</th>
+							</tr>
+							<tr>
+								<td>Hollee</td>
+								<td>1-664-520-4588</td>
+
+								<td>August 2nd, 2012</td>
+							</tr>
+							<tr>
+								<td>Colette</td>
+								<td>862-3211</td>
+
+								<td>July 3rd, 2014</td>
+							</tr>
+							<tr>
+								<td>Margaret</td>
+								<td>326-1614</td>
+
+								<td>August 27th, 2013</td>
+							</tr>
+							<tr>
+								<td>Adrienne</td>
+								<td>1-159-147-6757</td>
+
+								<td>October 31st, 2012</td>
+							</tr>
+							<tr>
+								<td>Mira</td>
+								<td>1-203-121-0270</td>
+
+								<td>June 27th, 2014</td>
+							</tr>
+						</table>
+						<h2 class="heading">.table.table-zebra-column &amp; .table-hover</h2>
+						<table class="table table-zebra-column table-hover">
+							<tr>
+								<th>Name</th>
+								<th>Phone</th>
+
+								<th>Date</th>
+							</tr>
+							<tr>
+								<td>Hollee</td>
+								<td>1-664-520-4588</td>
+
+								<td>August 2nd, 2012</td>
+							</tr>
+							<tr>
+								<td>Colette</td>
+								<td>862-3211</td>
+
+								<td>July 3rd, 2014</td>
+							</tr>
+							<tr>
+								<td>Margaret</td>
+								<td>326-1614</td>
+
+								<td>August 27th, 2013</td>
+							</tr>
+							<tr>
+								<td>Adrienne</td>
+								<td>1-159-147-6757</td>
+
+								<td>October 31st, 2012</td>
+							</tr>
+							<tr>
+								<td>Mira</td>
+								<td>1-203-121-0270</td>
+
+								<td>June 27th, 2014</td>
+							</tr>
+						</table>
+						<h2 class="heading">.table.table-zebra-both</h2>
+						<table class="table table-zebra-both">
+							<tr>
+								<th>Name</th>
+								<th>Phone</th>
+
+								<th>Date</th>
+							</tr>
+							<tr>
+								<td>Hollee</td>
+								<td>1-664-520-4588</td>
+
+								<td>August 2nd, 2012</td>
+							</tr>
+							<tr>
+								<td>Colette</td>
+								<td>862-3211</td>
+
+								<td>July 3rd, 2014</td>
+							</tr>
+							<tr>
+								<td>Margaret</td>
+								<td>326-1614</td>
+
+								<td>August 27th, 2013</td>
+							</tr>
+							<tr>
+								<td>Adrienne</td>
+								<td>1-159-147-6757</td>
+
+								<td>October 31st, 2012</td>
+							</tr>
+							<tr>
+								<td>Mira</td>
+								<td>1-203-121-0270</td>
+
+								<td>June 27th, 2014</td>
+							</tr>
+						</table>
+						<h2 class="heading">.table.footable.table-zebra</h2>
+						<table class="table footable table-zebra">
+							<caption><strong class="large">Monthly savings</strong></caption>
+							<thead>
+								<tr>
+									<th data-class="expand">Name</th>
+									<th>Phone</th>
+									<th data-hide="phone,tablet">Email</th>
+									<th data-hide="phone,tablet">Date</th>
+								</tr>
+							</thead>
+							<tr>
+								<td>Hollee</td>
+								<td>1-664-520-4588</td>
+								<td>example@email.com</td>
+								<td>August 2nd, 2012</td>
+							</tr>
+							<tr>
+								<td>Colette</td>
+								<td>862-3211</td>
+								<td>example@email.com</td>
+								<td>July 3rd, 2014</td>
+							</tr>
+							<tr>
+								<td>Margaret</td>
+								<td>326-1614</td>
+								<td>example@email.com</td>
+								<td>August 27th, 2013</td>
+							</tr>
+							<tr>
+								<td>Adrienne</td>
+								<td>1-159-147-6757</td>
+								<td>example@email.com</td>
+								<td>October 31st, 2012</td>
+							</tr>
+							<tr>
+								<td>Mira</td>
+								<td>1-203-121-0270</td>
+								<td>example@email.com</td>
+								<td>June 27th, 2014</td>
+							</tr>
+						</table>
+						<h1 class="heading">Forms</h1>
+						<h2 class="heading">Basic forms</h2>
+						<form class="form-stiff">
+							<fieldset>
+								<legend>Stiff form</legend>
+								<div class="control-row">
+									<label class="label-wrap">Label name</label>
+									<div class="control">
+										<input type="text" class="input-large" placeholder="Username" />
+									</div>
+								</div>
+								<div class="control-row">
+									<label class="label-wrap">Label name</label>
+									<div class="control">
+										<input type="text" class="full-wide" placeholder="Password" />
+									</div>
+								</div>
+								<div class="control-row">
+									<div class="control">
+										<label class="checkbox">
+											<input type="checkbox" value="">
+											Remember me
+										</label>
+										<input type="Button" value="Login" class="btn large" />
+									</div>
+								</div>
+							</fieldset>
+						</form>
+						<form class="form-inline">
+							<fieldset>
+								<legend>Inline form</legend>
+								<div class="control-row">
+
+									<input type="text" class="input-small" placeholder="Username" />
+
+									<input type="text" class="input-small" placeholder="Password" />
+									<label class="checkbox">
+										<input type="checkbox" value="">
+										Remember me
+									</label>
+									<input type="Button" value="Login" class="btn large" />
+								</div>
+							</fieldset>
+						</form>
+						<form>
+							<fieldset>
+								<legend>Drafty forms</legend>
+								<label>Crabby King</label>
+								<input type="text" placeholder="Type something…" />
+								<label>Crabby King</label>
+								<input type="color" />
+								<label>Crabby King</label>
+								<input type="date" />
+								<input type="datetime" class="input-fullwide" />
+								<input type="email" disabled="disabled" />
+								<input type="range" />
+								<input type="time" />
+								<input type="month" />
+								<input type="file" />
+								<input type="week" />
+
+								<label>
+									Label name
+								<textarea placeholder="Type something…"></textarea>
+								</label>
+								<div></div>
+								<label class="checkbox">
+									<input type="checkbox" value="">
+									Option one is this and that—be sure to include why it's great
+								</label>
+								<label class="checkbox">
+									<input type="checkbox" value="">
+									Option one is this and that—be sure to include why it's great
+								</label>
+								<h3 class="heading">Inline Label</h3>
+								<label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+									Alpha
+								</label>
+								<label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox2" value="option2">
+									Beta
+								</label>
+								<label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox3" value="option3">
+									Gamma
+								</label>
+								<h3 class="heading">Multiline select</h3>
+								<select multiple="multiple" size="3">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+								<span class="help-block">Example block-level help text here.</span>
+								<label class="checkbox">
+									<input type="checkbox" />
+									Check me out
+								</label>
+								<button type="submit" class="btn">Submit</button>
+							</fieldset>
+						</form>
+						<h2 class="heading">Misc Classes</h2>
+						<h3 class="heading">Sizing classes</h3>
+						<p>.large .x-large .xx-large</p>
+						<h3 class="heading">Clearfix</h3>
+						<p>Useful clear floating</p>
+						<h3 class="heading">Lists</h3>
+						<nav>
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Clients</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+						</nav>
+						<h3 class="heading">Unstyled list</h3>
+						<ol class="unstyle">
+							<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+							<li>Aliquam tincidunt mauris eu risus.</li>
+						</ol>
+						<h3 class="heading">Pre tag</h3>
+						<pre>
+#header h1 a {
+display: block;
+width: 300px;
+height: 80px;
+}
+</pre>
+						<h3 class="heading">code tag</h3>
+						<ul class="unstyle">
+							<li>
+								<p>
+									<code>min-width: 25em /* 400px */</code>
+								</p>
+							</li>
+							<li>
+								<p>
+									<code>min-width: 40em /* 640px */</code>
+								</p>
+							</li>
+							<li>
+								<p>
+									<code>min-width: 50em /* 800px */</code>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<div id="samplegrid" class="container">
+		<h1 class="heading">Grid system</h1>
+		<h2 class="heading">.container-960</h2>
+		<p class="notice">A container class that only scale when its width smaller than 960px </p>
+		<h2 class="heading">Default row</h2>
+		<p class="notice">2 stack level</p>
+		<div class="row row12 show-grid">
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+		</div>
+		<h2 class="heading">Flex row</h2>
+		<p class="notice">4 stack level,suit for item list & grid</p>
+		<div class="row row10 flex show-grid">
+			<div class="col col2">
+				<div class="item">2</div>
+			</div>
+			<div class="col col2">
+				<div class="item">2</div>
+			</div>
+			<div class="col col2">
+				<div class="item">2</div>
+			</div>
+			<div class="col col2">
+				<div class="item">2</div>
+			</div>
+			<div class="col col2">
+				<div class="item">2</div>
+			</div>
+		</div>
+		<div class="row row12 flex show-grid">
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+		</div>
+		<h2 class="heading">Bootstrap like row</h2>
+		<p class="notice">1 stack level</p>
+		<div class="row row5 bootlike show-grid">
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+		</div>
+		<h2 class="heading">Persist row</h2>
+		<p class="notice">Won't ever stack</p>
+		<div class="row row5 persist show-grid">
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+		</div>
+		<h2 class="heading">Nested,offset & some other example</h2>
+		<div class="row row12 show-grid">
+			<div class="col col2">
+				<div class="item">2</div>
+			</div>
+			<div class="col col3">
+				<div class="item">3</div>
+			</div>
+			<div class="col col4">
+				<div class="item">4</div>
+			</div>
+			<div class="col col3">
+				<div class="row row12">
+					<div class="col col2">
+						<div class="item">2</div>
+					</div>
+					<div class="col col3">
+						<div class="item">3</div>
+					</div>
+					<div class="col col4">
+						<div class="item">4</div>
+					</div>
+					<div class="col col3">
+						<div class="item">3</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row4 show-grid">
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+			<div class="col col1">
+				<div class="item">1</div>
+			</div>
+		</div>
+		<div class="row row12 show-grid">
+			<div class="col col9 offset2">
+				<div class="row row12">
+					<div class="col col2">
+						<div class="row row12">
+							<div class="col col2">
+								<div class="item">2</div>
+							</div>
+							<div class="col col3">
+								<div class="item">3</div>
+							</div>
+							<div class="col col4">
+								<div class="item">4</div>
+							</div>
+							<div class="col col3">
+								<div class="row row12">
+									<div class="col col2">
+										<div class="item"></div>
+									</div>
+									<div class="col col3">
+										<div class="item">3</div>
+									</div>
+									<div class="col col4">
+										<div class="item">4</div>
+									</div>
+									<div class="col col3">
+										<div class="item">3</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col col3">
+						<div class="item">3</div>
+					</div>
+					<div class="col col4">
+						<div class="item">4</div>
+					</div>
+					<div class="col col3">
+						<div class="item">3</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="row row12 show-grid">
+			<div class="col col12">
+				<div class="item">12</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="footable/js/footable.js"></script>
+	<script src="js/sickles.min.js"></script>
+</body>
+
+</html>

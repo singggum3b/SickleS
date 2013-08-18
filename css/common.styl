@@ -1,0 +1,686 @@
+html
+	font-size 100%
+
+body
+	font-family $base-font
+	font-size $font-size
+	color $color-black
+	line-height $line-height
+
+h1,h2,h3,h4,h5,h6
+	line-height $line-height
+
+a
+	text-decoration none
+	color steelblue
+
+a:hover
+	text-decoration underline
+	color navy
+
+.heading
+	border-bottom 1px solid $color-gray2
+
+.h-master h1
+	font-size ($font-size*4)
+	margin 0
+.h-master .descript
+	font-size ($font-size*4*0.618)
+	line-height $line-height
+	margin 0
+.h-master[max-width~={s('"%s"',$grid_threshold[1])}] 
+	& .descript
+		font-size ($font-size*3*0.618)
+	
+.h-master[max-width~={s('"%s"',$grid_threshold[0])}] 
+	& h1
+		font-size ($font-size*4*0.618)
+	
+.pull-right
+	float:right
+
+.pull-left
+	float:left	
+
+.text-right
+	text-align right
+	
+.text-center
+	text-align center
+
+.text-left
+	text-align left
+	
+q
+	font-style italic
+	border-bottom 0.125em solid $color-gray1
+	color steelblue
+
+blockquote
+	border 1px solid $color-gray1
+	font-size $font-size-lead
+	border-left 0.25em solid $color-gray1
+	padding-left 0.5em	
+
+blockquote.text-right
+	text-align right
+	border-right 0.25em solid $color-gray1
+	border-left 1px solid $color-gray1
+	padding-right 0.5em
+	
+blockquote small
+	color $color-gray2
+cite
+	color steelblue
+blockquote .note
+	margin-top -1em
+
+code,pre
+	background-color $color-gray1
+	border 1px dashed $color-gray2
+	font-family $code-font
+	padding $inline-padding
+
+ul.unstyle
+	list-style none
+	
+//img
+img
+	max-width 100%
+
+.googleMaps img
+	max-width auto
+
+//messages
+.msg
+	padding 0.2em 1.5em 0.2em 3.5em
+	background-color steelblue
+	border-radius $br-default
+	color $color-white
+	width 100%
+	box-sizing border-box
+	margin-top 1em
+	margin-bottom 1em
+	position relative
+	& a:link
+		font-weight bold		
+		color inherit
+	& a:hover
+		text-decoration underline
+	& a:visited
+		color inherit
+.msg:before
+	font-family monospace
+	font-size 2em
+	content 'i'
+	position absolute
+	top 50%
+	margin-top -0.5em
+	left 0.5em
+	width 1em
+	height 1em
+	line-height 1em
+	text-align center
+	border-radius $br-default
+	background-color rgba(0, 0, 0, .4)
+	font-weight bold
+	color $color-white
+
+.msg-warning
+	background-color #FFC887
+	color #CC5400
+
+.msg-fail
+	background-color #CC3900
+
+.msg-success
+	background-color #45BF55
+	color #044D29
+
+.msg-warning:before
+	content "!"
+
+.msg-fail:before
+	content "x"
+
+.msg-success:before
+	content ">"
+
+//notice
+.notice
+	background-color $color-gray1
+	color steelblue
+	padding-left 2.25em
+.notice:before
+	border-radius $br-default
+	content 'i'
+	font-weight bold
+	width 0.75em
+	margin-right 0.5em
+	margin-left -2.25em
+	color $color-white
+	display inline-block
+	padding-left 0.5em
+	padding-right 0.5em
+	background-color steelblue
+	text-align center
+.notice-warning
+	color goldenrod
+.notice-warning:before
+	content '!'
+	background-color #FFC887
+.notice-fail
+	color #CC3900
+.notice-fail:before
+	content 'x'
+	background-color #CC3900
+.notice-success
+	color #45BF55
+.notice-success:before
+	content '>'
+	background-color #45BF55
+
+//tabs
+.tabs-nav
+	list-style none
+	padding-left 0em
+	margin-bottom 0em
+	& li
+		display inline-block
+		padding 0.2em 1em
+		border 1px solid $color-gray2
+		border-bottom-width 0px
+		cursor pointer
+		box-shadow inset 0px -2px 3px -1px rgba(0, 0, 0, 0.1)
+		background-color $color-white
+		border-top-left-radius $br-default
+		border-top-right-radius $br-default
+	& .tab-active
+		box-shadow inset 0px 2px 0px 0px rgba(0, 0, 0, 0.1)	
+.tabs-content
+	border 1px solid $color-gray2
+	padding 0em 1em
+	border-bottom-left-radius $br-default
+	border-bottom-right-radius $br-default
+	border-top-right-radius $br-default
+.tabs-item
+	display none	
+.tabs-item.tab-active
+	display block
+
+
+//slidershow
+.slidershow
+	position relative
+	overflow hidden
+.slide-nav		
+	padding-left 0em
+	position absolute
+	width 100%
+	text-align left
+	bottom 0em
+	padding 0em 1em
+	box-sizing border-box
+	& li
+		list-style none
+		border-radius 50%
+		width 0.5em
+		height 0.5em
+		border 1px solid $color-white
+		display inline-block
+		&:hover
+			background-color $color-white
+			cursor pointer
+	& li.active
+		background-color $color-white
+.slide-content
+	position relative
+	width 1000%
+	overflow visible
+	clearfix()	
+.slide-item
+	width 10%
+	float left
+	& > img
+		display block
+
+.slide-caption	
+	transition all 0.5s ease
+	position absolute
+	color $color-white
+	background-color rgba(black, .3)
+	width 10%
+	box-sizing border-box
+	padding 0em 1em
+	text-align right
+	opacity 0
+	bottom 0
+	& p
+		margin-top 0em
+.slidershow:hover .slide-caption		
+	opacity 1
+
+.slide-title
+	margin-bottom 0em
+
+//menu
+.nav
+	list-style none
+	padding-left 0em
+	margin 0em
+
+.nav,.dropdown-menu
+	& > li
+		display inline-block		
+		& a:link
+			display block
+			padding 0.2em 1em
+			text-decoration none
+			color $color-black
+			border-radius $br-default
+		& a:visited
+			color $color-black
+		& a:hover,& a:focus
+			background-color $color-gray1
+	& > li.active
+		& a:link
+			color $color-white
+			background-color steelblue
+		& a:hover,& a:focus
+			background-color steelblue
+		& a:visited
+			color $color-white
+
+.nav-minimal
+	padding-left 0em
+	& > li	
+		display inline-block
+		vertical-align top
+		padding 0em 0.5em
+	& > li.active
+		font-weight bold	
+
+.dropdown-menu
+	& > li
+		display block
+.nav-vertical,.dropdown-menu
+	& > li
+		display block
+.dropdown
+	display inline-block
+.dropdown-menu
+	list-style none
+	padding-left 0em
+	margin 0em
+	margin-top 1px	
+	border-radius $br-default
+	border 1px solid $color-gray2
+	display none
+	background-color $color-white
+	position absolute
+	box-shadow 0px 2px 2px 1px rgba(0, 0, 0, 0.1)
+
+.row.menu[max-width~={s('"%s"',$grid_threshold[1])}] .dropdown-menu,.col.menu[max-width~={s('"%s"',$grid_threshold[0])}] .dropdown-menu,.nav-vertical .dropdown-menu
+	position relative
+	border none
+	margin-left 1em
+	margin-right 1em
+	background-color transparent
+	box-shadow none
+
+.dropdown .dropdown-menu.open
+	display block
+
+.dropdown-header
+	font-variant small-caps
+	border-top 1px solid $color-gray2
+	color $color-gray2
+	font-weight bold
+	padding 0.2em 1em
+	cursor default
+
+.collapse
+	display none
+
+.menu .collapse
+	text-align right
+	font-weight bold
+	margin 0.2em 1em 0.2em
+
+.row.menu[max-width~={s('"%s"',$grid_threshold[1])}] .collapsable
+	display none
+
+.row.menu[max-width~={s('"%s"',$grid_threshold[1])}] .collapse
+	display block
+
+.col.menu[max-width~={s('"%s"',$grid_threshold[0])}] .collapsable
+	display none
+
+.col.menu[max-width~={s('"%s"',$grid_threshold[0])}] .collapse
+	display block
+
+.menu .nav.collapsable.show,.collapsable.show
+	display initial
+
+.row.menu[max-width~={s('"%s"',$grid_threshold[1])}] .nav.collapsable.show,.col.menu[max-width~={s('"%s"',$grid_threshold[0])}] .nav.collapsable.show
+	display block
+	& > li
+		display block
+
+.fixed-top
+	position fixed
+	top 0em
+	width 100%
+	z-index 999
+
+//table
+.table
+	width 100%
+.table th
+	text-align left
+.table td,th	
+	word-wrap break-word
+	padding ($cell-padding*0.618) $cell-padding
+	
+.table tr
+	border-bottom 1px solid $color-gray2
+
+.table caption
+	border-bottom: 2px dashed $color-gray2;
+	
+.table caption[max-width~={s('"%s"',$grid_threshold[0])}]
+	text-align left;
+
+.table caption:after
+	content " Table"
+	color $color-gray2;
+	
+.table
+	&.table-relax td,&.table-relax th
+		padding-top $cell-padding
+		padding-bottom $cell-padding
+	&.table-bordered
+		border 1px solid $color-gray2
+		& td,th
+			border 1px solid $color-gray2
+	&.table-zebra:not(.footable) tr:nth-child(even),&.table-zebra .zebra
+		background-color rgba($color-gray1,0.5)
+	&.table-zebra-column td:nth-of-type(even),
+	&.table-zebra-column th:nth-of-type(even)
+		background rgba($color-gray1,0.5)
+	&.table-zebra-both td:nth-of-type(even),
+	&.table-zebra-both th:nth-of-type(even),
+	&.table-zebra-both:not(.footable) tr:nth-of-type(even),&.table-zebra-both .zebra
+		background rgba($color-gray1,0.5)
+	&.table-zebra-both:not(.footable) tr:nth-of-type(even) td:nth-of-type(even),&.table-zebra-both .zebra td:nth-of-type(even)
+		background rgba($color-gray2,0.5)
+	&.table-hover tr:hover
+		background rgba($color-gray1,0.5)
+
+//Form
+form > *,form fieldset > *
+	display block	
+	margin-bottom 1em
+form label
+	margin-bottom 0.2em
+
+fieldset
+	border 1px solid $color-gray2
+	border-radius $br-default
+	padding-left 1em
+	padding-right 1em
+legend
+	font-size 1.125em
+	line-height 1.5em
+	border 1px solid $color-gray2
+	border-radius $br-default
+	padding ($cell-padding*0.618) $cell-padding
+
+$x=length($input-text)	
+$temp=""
+
+for i in 0..$x
+	$temp+= "input[type="+s('"%s"',$input-text[i]) + "]"
+	if i<$x
+		$temp+=","
+	
+{$temp}
+	height 2em
+	border-radius $br-default
+	border 1px solid #c4c4c1 // stroke
+	box-shadow inset 0.4em 0 0 rgba(0,0,0,.1), inset 0 0 5px rgba(198,198,181,.2) // inner shadow and inner glow
+	padding-left 0.65em
+	width 100%
+	vertical-align middle	
+	box-sizing(border-box)
+
+textarea,select
+	border-radius $br-default
+	border 1px solid #c4c4c1 // stroke
+	box-shadow inset 0.4em 0 0 rgba(0,0,0,.1), inset 0 0 5px rgba(198,198,181,.2) // inner shadow and inner glow
+	padding-left 0.65em
+	width 100%
+	max-width 100%
+	box-sizing(border-box)
+	
+$temp=""
+for i in 0..$x
+	$temp+= "& input[type="+s('"%s"',$input-text[i]) + "]"
+	if i<$x
+		$temp+=","
+
+.form-stiff .control-row > label
+	width 12em
+	text-align right
+	display block
+	vertical-align top
+	float left
+.form-stiff .control-row .control
+	display block
+	margin-left 13em
+.form-stiff .control-row .control > *
+	display block
+	
+.form-stiff[max-width~={s('"%s"',$grid_threshold[0])}]
+	{$temp}
+		width 100%
+
+.form-stiff[max-width~={s('"%s"',$grid_threshold[1])}]
+	& .control-row .control
+		margin-left 0em
+	& .control-row > label
+		text-align left
+		float none
+.form-inline
+	& label
+		display inline-block
+input.input-small
+	width 7em
+	
+input.input-large
+	width 21em
+	
+label.inline
+	display inline-block
+	padding-right 0.5em
+	
+//cursor
+.disabled,[disabled]
+	cursor not-allowed
+
+//viewport-depend visibility
+.viewport-ref[max-width~={s('"%s"',$grid_threshold[0])}] .phone-hidden
+	display none
+.viewport-ref[min-width~={s('"%s"',$grid_threshold[0])}][max-width~={s('"%s"',$grid_threshold[1])}] .tablet-hidden
+	display none
+.viewport-ref[min-width~={s('"%s"',$grid_threshold[1])}] .pc-hidden
+	display none
+//misc
+.large
+	font-size 1.125em
+	line-height 1.5em
+	
+.x-large
+	font-size 1.25em
+	line-height 1.625em
+	
+.xx-large
+	font-size 1.375em
+	line-height 1.75em
+	
+.full-wide,input.full-wide
+	width 100%
+	box-sizing(border-box)
+
+.arrow-down
+	content ""
+	display inline-block
+	position relative
+	width 0 
+	height 0 
+	border-left 0.4em solid transparent
+	border-right 0.4em solid transparent	
+	border-top 0.4em solid $color-black
+	border-top-color inherit
+	vertical-align middle
+	margin 0.1em 0.4em
+
+//box
+.box,.pagi li
+	border-radius $br-default
+	box-shadow 0 1px 3px rgba(0, 0, 0, 0.2)	
+.box-content 
+	padding 0em 1em
+.box-simple,.pagi li 
+	border 1px solid rgba(0,0,0,0.2)
+	background-color $color-white
+.box-3d
+	border 1px solid rgba(0,0,0,0.15)
+	background linear-gradient(top, #f7f7f7, #e7e7e7)
+	background-color #f7f7f7
+	box-shadow 0 1px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px #fff;
+.box-glass 	
+	border 1px solid rgba(0,0,0,0.5)
+	background rgba(0,0,0,0.1)
+	box-shadow 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3)
+.box-cap
+	min-height 0.5em
+	background-color steelblue
+.box-title
+	box-shadow 0 3px 0px rgba(0,0,0,0.2)
+	margin-top 1em
+	background-color steelblue
+	padding 0em 1em
+	color $color-white
+
+//img
+.img-circle
+	border-radius 50%
+.img-rounded
+	border-radius $br-default
+.img-polaroid,.thumbnail
+	border 1px solid rgba(0,0,0,0.2)
+	box-shadow 0 1px 3px rgba(0, 0, 0, 0.2)
+	padding 0.25em
+.thumbnail
+	display block
+	max-width 100%
+	box-sizing border-box
+.thumbnail img
+	display block
+	margin-left auto
+	margin-right auto
+.thumbnail-caption
+	margin-left 0.75em
+	margin-right 0.75em
+	text-align left
+	border 1px solid transparent
+
+//pagination
+.pagi
+	list-style none
+	padding-left 0em
+	& li		
+		display inline-block
+		padding 0em 0.5em
+		background-color $color-white
+	& li:hover		
+		cursor pointer
+		background-color whitesmoke
+	& .pagi-active
+		background-color $color-gray1
+.pagi-dark
+	& li
+		color $color-gray2
+		background-color #3e4347
+		box-shadow inset 0px 1px 1px rgba(255,255,255, .2),0 1px 3px rgba(0, 0, 0, 0.2)
+	& li:hover		
+		cursor pointer
+		background-color $color-black
+	& .pagi-active
+		background #2f3237
+		box-shadow inset 0px 0px 8px rgba(0,0,0, .5),0px 1px 0px rgba(255,255,255, .1)
+		color $color-white
+
+//progress bar
+.progress
+	padding 0.2em 0.2em
+	border-radius $br-default
+	border 1px solid $color-gray2
+.progress-bar
+	border-radius $br-default
+	height 0.5em
+	background-color steelblue
+	border 1px solid rgba(0, 0, 0, .45)
+.progress-3d
+	box-shadow inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px white
+	background-color $color-gray1
+.progress-3d .progress-bar
+	box-shadow inset 0px 1px 1px rgba(255,255,255, .2),0 1px 3px rgba(0, 0, 0, 0.2)
+@keyframes animatedStripe
+	to
+		background-position 100% 0
+.progress-stripe
+	background-size 2em 2em
+	background-image linear-gradient(top left, rgba(255, 255, 255, .2) 25%, transparent 25%,transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,transparent 75%, transparent)
+	animation animatedStripe 40s linear infinite
+
+//wizard step
+.wizard
+	list-style none
+	padding-left 0em
+	width 100%
+	letter-spacing -0.3317em
+.wizard:before
+	content ""
+.wizard-step
+	border-bottom 2px solid
+	letter-spacing normal
+	display inline-block
+	color $color-gray2
+	padding-right 0.5em
+.wizard-step-number
+	border 2px solid
+	width 2em
+	height 2em
+	display inline-block
+	text-align center
+	line-height 2em
+	font-weight bold
+	margin-right 0.5em
+	margin-bottom -2px
+	border-radius 2px
+.wizard-step-active
+	color inherit
+	border-color steelblue
+	& .wizard-step-number
+		border-color steelblue
+		color steelblue
+.wizard-step-finish
+	color inherit
+	border-color steelblue
+	& .wizard-step-number
+		border 2px solid steelblue
+		background-color steelblue
+		color white		
+

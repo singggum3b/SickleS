@@ -1,0 +1,54 @@
+
+.btn
+	display inline-block
+	padding $button-padding
+	border 1px solid #92999a // stroke
+	box-shadow inset 0 1px 0 rgba(255,255,255,.4), inset 0 0 0 1px rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.1) // inner shadow and inner glow
+	background linear-gradient(bottom, #ededed 0%, #fff 100%) // gradient overlay
+	text-shadow 0 1px 0 rgba(255,255,255,.7) // drop shadow
+	text-decoration none
+	border-radius $br-default
+	color $color-black
+	vertical-align middle
+	
+button,input
+	line-height $line-height	
+	
+.btn:hover,.btn:focus,.btn.disabled,.btn[disabled]
+	background none
+	background-color $color-gray2
+	text-decoration none
+	color $color-black
+
+.btn:active,.btn.active
+	box-shadow inset 0 2px 3px rgba(77,77,77,.4) // inner shadow
+
+.btn-dark,.btn-skyblue
+	color $color-white
+	text-shadow 0 1px 0 rgba(0,0,0,.618)
+	
+.btn-dark
+	background-color #45484d
+	border 1px solid #161616 // stroke
+	box-shadow inset 0 1px 0 rgba(255,255,255,.2), inset 0 0 0 1px rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.1)
+	background linear-gradient(bottom, $color-black 0%, #45484d 100%) // gradient overlay
+	
+.btn-dark:hover,.btn-dark:focus,.btn-dark.disabled,.btn-dark[disabled]
+	background none
+	background-color $color-black
+	color $color-white
+	
+.btn-skyblue
+	background-color #6ad3ff
+	border 1px solid #1d9ddd // stroke
+	box-shadow inset 0 1px 0 rgba(255,255,255,.4), inset 0 0 0 1px rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.1) // inner shadow and inner glow
+	background linear-gradient(bottom, #1ba0e3 0%, #6ad3ff 100%) // gradient overlay
+.btn-skyblue:hover,.btn-skyblue:focus,.btn-skyblue.disabled,.btn-skyblue[disabled]
+	background none
+	background-color #1ba0e3
+	color $color-white
+.btn.full-wide
+	text-align center
+.btn.disabled,.btn[disabled]
+	opacity(0.5)
+	box-shadow none

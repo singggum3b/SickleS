@@ -1,0 +1,48 @@
+
+@import "nib"
+@import "variables"
+@import "normalize"
+@import "common"
+@import "grid"
+@import "button"
+
+h1,h2,h3,h4,h5,h6
+	font-weight normal
+#topmenu
+	padding 1em 0em
+	background-color $color-white
+	border-bottom 1px solid $color-gray1
+	& .active
+		font-weight bold
+#topmenu[max-width~={s('"%s"',$grid_threshold[1])}]
+	padding 0.2em 0em
+#samplegrid h1,#samplegrid h2
+	text-align center
+#samplegrid  .row
+	margin 0.5em 0em
+	background-color whitesmoke
+#samplegrid .col
+	border 1px solid gainsboro
+	box-sizing border-box
+#samplegrid .item
+	font-weight bold
+	color white
+	text-align center
+	min-height 1.5 em
+	background-color steelblue
+	border-radius $br-default 
+	padding 0.5em
+#sic_banner
+	background url(../img/bg.svg) repeat	
+	background-color steelblue
+	border-bottom 1px solid $color-gray2
+	margin-top 3em
+	color $color-white
+#sic_banner .h-master h1
+	font-size 8em	
+	text-shadow 1px 1px 0 #CCC,	2px 2px 0 #CCC,3px 3px 0 #444,4px 4px 0 #444,5px 5px 0 #000,6px 6px 0 #000
+#sic_banner .h-master[max-width~={s('"%s"',$grid_threshold[1])}] h1
+	font-size 4em
+#sic_banner .h-master .descript
+	font-family 'Georgia',serif
+	background-color #1C293C

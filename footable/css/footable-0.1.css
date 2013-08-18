@@ -1,0 +1,105 @@
+﻿
+@font-face {
+  font-family: 'beacon';
+  src: url(data:application/x-font-woff;charset=utf-8;base64,d09GRk9UVE8AAAQsAAsAAAAABkgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAABCAAAAQwAAAGKeRpLkEZGVE0AAAIUAAAAGgAAABxoSV30R0RFRgAAAjAAAAAdAAAAIAAxAARPUy8yAAACUAAAAEsAAABgL9zcQGNtYXAAAAKcAAAAPQAAAVLgE/LNaGVhZAAAAtwAAAAuAAAANv0q++FoaGVhAAADDAAAAB4AAAAkBBD/5GhtdHgAAAMsAAAADgAAAA4EAAAAbWF4cAAAAzwAAAAGAAAABgAEUABuYW1lAAADRAAAANsAAAF6nFLBmnBvc3QAAAQgAAAADAAAACAAAwAAeJxtTrtKA0EUPXczYWUzbDRmJQtDVi3dZgVrQUGbLaO9DyyMEEHiJ4jKaDfWVjZ+hD+Q1n+IsB+wAwmM+0wQbM49j3vnDIExEJF9cXV+eTsCWSDs676lg4buMckbkrO+A3/QMVIuCLfljVZ63BR4aAtgVeBlTYALfHfQzN9YQRsbENi+H10fR1GUjaPF2C3bqk6AHumJnsGILL5z4Eo9ZnOlle2mWYe36cxP2JaTdtM9bxImcRjGSThJ/qazIk1VbLtadaUnuZP9Zx0W0eDD4PXs0ODu/cuYnJmCLeU/XrFcni1l7QUtgyHrGZzOfiooZA7msw7MWwnT3PPLoPaKs2m1PGR+0PoF4Uag9HicY2BgYGQAgjO2i86D6HOsdyfBaABLBQcAAAB4nGNgZGBg4ANiCQYQYGJgBEJmIGYB8xgABGsANgAAAHicY2BmYmCcwMDKwMHow5jGwMDgDqW/MkgytDAwMDGwMjPAgQCCyRCQ5prC4PCA4QMD44P/Dxj0GB8wKDQwMDDCFSgAISMAEEIMHwB4nGNgYGBmgGAZBkYGEPAB8hjBfBYGAyDNAYRMIIkHjB8Y/v8HsxggLAUmAUaoLjBgZGNA5o5IAADKgwivAAAAeJxjYGRgYABiYwlFlnh+m68M3EwMIHCO9e4kBP3/ARMD4wMgl4MBLA0A7H0JbwAAeJxjYGRgYHzw/wGDHhMDA8M/BiAJFEEBzABt5wP2AAACAAAAAAAAAAIAAAAAAAAAAABQAAAEAAB4nG2QMW7CMBiFv0BIhYq6lTlC6pgodgck5ooDMLAHZEVIiEgGrsIJuvUYPUBP0Lv04fxDB2xZ/+fn5/dbBmbcyLiPjIIX4xFPvBmPWXA2zuX5NJ7wzLdxofkrZ5ZPpczSrTuPlPhqPOaDyjhPfQeeMOfLuJD+w45Ay56eE+xCu+9VNxI7rhx1FLUN3fXYCtbJdkk1yhEo8dQ0qiut/2GD4nResdTycjneFdKfLus+dqH0dVOuyqGpwPlqWfnGyfPwVVuJUd9zsHyXOrMN8XxQgKubxxf/AFCINSUAeJxjYGbACwAAfQAE) format('woff');    
+  font-weight: normal;
+  font-style: normal;
+}
+.footable.breakpoint > tbody > tr > td.expand:before {
+  font-family: 'beacon';
+  font-size:1em;
+  margin-right:1em;
+  content:"\e000"  
+}
+.footable.breakpoint > tbody > tr.footable-detail-show > td.expand:before {
+  content:"\e001"
+}
+@media all\0 { 
+  .footable.breakpoint > tbody > tr > td.expand:before {
+  content:""  
+}
+.footable.breakpoint > tbody > tr.footable-detail-show > td.expand:before {
+  content:""
+}
+ .footable.breakpoint > tbody > tr > td.expand {
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7UlEQVQ4T62T4RGCMAyFZQIdASdQN8BJdANxE9mATWQDYQIZQSfQfL3EixH+CL17B02Tl7w0zRa/KxfTSVAItnrcyrcRVILeh2Qh/qLBA7wfEz5n23kCsmz0gEy1ABuLSkrBwVW0498ILPNTS7fAWAlESFmqnBKCXHBXT1h98EvtvlJIbmpfc2DZKZsy/Roi4LxWORUEpj1mx3GMwKpoIYhOto/6bW9ykt8sBFMkdLM0cfI10gu7yof878Ms+GbS/atgJUjXPjbK3DMOfpR5YEdl6+SbHto/j+lr4CIBpPSEiSwE9rjI2KjU3mt6A/h6QQ6PDdkxAAAAAElFTkSuQmCC) no-repeat 0.3em center;
+}
+.footable.breakpoint > tbody > tr.footable-detail-show > td.expand {
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA5UlEQVQ4T62Tiw2CQBBEpQItAStQO8BKtAOxE+nATqQDoQIpQSvQeWTXHKcYIlwyue/Ofm42mX2OVEcHIRPWdl1pLoVCaEKTJLI/mfEX3vcRb46+CwnwsrILPJ0FzhhEkgu7IKINaydwzw8L3Q3jSCAilbmlk0OQCjd7CWufsZNBcrXNEgL3TtiEOWSQHukUEHjuQ7zHUVQQPO3U6+H7vkg67yYhGJNCPUkRR38jxfKvvGu9/aEFNHARFqGQvNqhlPlndBFKmQbb2+Nac9to/zRTR3AxAaTUBEVmgjcXHktLtQkF8gLE9jsOw4gaxgAAAABJRU5ErkJggg==) no-repeat 0.3em center;
+}
+}
+.footable.breakpoint > tbody > tr > td.expand,.footable.breakpoint > tbody > tr.footable-detail-show > td.expand {  
+  padding-left: 1em;
+}
+
+.footable.breakpoint > tbody > tr.footable-row-detail {
+  background: #F2F2F2;
+}
+
+.footable > tbody > tr:hover {
+  background: rgba(242,242,242,0.5);
+}
+
+.footable.breakpoint > tbody > tr:hover:not(.footable-row-detail) {
+  cursor: pointer;
+}
+
+.footable > tbody > tr > td, .footable > thead > tr > th {
+  text-align: left;
+}
+
+.footable > tbody > tr > td.footable-cell-detail {
+
+}
+
+.footable > thead > tr > th, .footable > thead > tr > td {
+/* styling table head */
+}
+
+.footable > thead > tr:first-child > th.footable-first-column, .footable > thead > tr:first-child > td.footable-first-column {
+  -moz-border-radius: 6px 0 0 0;
+  -webkit-border-radius: 6px 0 0 0;
+  border-radius: 6px 0 0 0;
+}
+
+.footable > thead > tr:first-child > th.footable-last-column, .footable > thead > tr:first-child > td.footable-last-column {
+  -moz-border-radius: 0 6px 0 0;
+  -webkit-border-radius: 0 6px 0 0;
+  border-radius: 0 6px 0 0;
+}
+
+.footable > thead > tr:first-child > th.footable-first-column.footable-last-column, .footable > thead > tr:first-child > td.footable-first-column.footable-last-column {
+  -moz-border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+}
+
+.footable > tbody > tr:last-child > td.footable-first-column {
+  -moz-border-radius: 0 0 0 6px;
+  -webkit-border-radius: 0 0 0 6px;
+  border-radius: 0 0 0 6px;
+}
+
+.footable > tbody > tr:last-child > td.footable-last-column {
+  -moz-border-radius: 0 0 6px 0;
+  -webkit-border-radius: 0 0 6px 0;
+  border-radius: 0 0 6px 0;
+}
+
+.footable > tbody > tr:last-child > td.footable-first-column.footable-last-column {
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+}
+
+.footable > thead > tr > th.footable-first-column, .footable > thead > tr > td.footable-first-column,
+.footable > tbody > tr > td.footable-first-column {
+}
+
+.footable > tbody img {
+  vertical-align:middle;
+}
+
+.footable > tfoot > tr > th, .footable > tfoot > tr > td {
+/* styling table footer */
+}

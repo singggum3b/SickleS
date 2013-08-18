@@ -1,0 +1,65 @@
+//clearfix
+clearfix()
+	&:before,&:after
+		content " "
+		display table
+	&:after
+		clear both
+	*zoom 1
+.clearfix
+	clearfix()
+
+.row
+	letter-spacing -0.3317em
+
+.col	
+	width 100%
+	display inline-block
+	letter-spacing normal
+	vertical-align top
+	
+.item
+	margin ($font-size/2)
+
+.container-960
+	max-width 960px
+	margin-left auto
+	margin-right auto
+
+//flex class generator
+for i in 1...4
+	for j in 1..$grid_col_count
+		for k in 1..$grid_col_count
+			.flex.row{j}[min-width~={s('"%s"',$grid_threshold[0] + ($grid_threshold[1] - $grid_threshold[0])/4*i)}][max-width~={s('"%s"',$grid_threshold[0] + ($grid_threshold[1] - $grid_threshold[0])/4*(i+1))}] > .col{k}
+				if j>k and (100/(ceil(ceil(j/k)/(5 - i))))<100 and j/k>=3
+					width unit((100/(ceil(ceil(j/k)/(5 - i)))),"%")
+
+//grid class generator
+for i in 1..$grid_col_count
+	for j in 1..$grid_col_count
+		.row{i}[min-width~={s('"%s"',$grid_threshold[0])}] > .col{j}
+			width 50% if ceil(i/j)==(i/j) and i>j
+
+//bootlike class generator
+.bootlike[min-width~={s('"%s"',$grid_threshold[0])}] > .col
+	width 100%
+	
+//persist class generator
+for i in 1..$grid_col_count
+	for j in 1..$grid_col_count
+		.row{i}.persist > .col{j}
+			width unit((100*j/i),"%") if i>j
+
+//grid class generator
+for i in 1..$grid_col_count
+	for j in 1..$grid_col_count
+		.row{i}[min-width~={s('"%s"',$grid_threshold[1])}] > .col{j}
+			width unit((100*j/i),"%") if i>j
+
+//offset class generator			
+for i in 1..$grid_col_count
+	for j in 1..$grid_col_count
+		.row{i}[min-width~={s('"%s"',$grid_threshold[1])}] > .offset{j}
+			margin-left unit((100*j/i),"%") if i>=j
+
+					
